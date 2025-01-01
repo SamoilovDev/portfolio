@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background: linear-gradient(90deg, #ffb447, #f6592a);
+  background: #333;
   color: white;
   padding: 20px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -168,7 +168,7 @@ main {
 }
 
 .about-me {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 50px auto;
   padding: 30px;
   background: white;
@@ -187,7 +187,7 @@ main {
 
 .about-me h2 {
   font-size: 2.5em;
-  color: #f6592a;
+  color: #FF7744;
   margin-bottom: 20px;
 }
 
@@ -208,7 +208,7 @@ main {
 }
 
 .about-me ul li {
-  background: linear-gradient(90deg, #f1f1f1, #d9d9d9);
+  background: linear-gradient(90deg, #f1f1f1, #eaeaea);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -231,28 +231,24 @@ main {
 }
 
 .icon-list-container {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Центрируем контейнер с элементами */
 }
 
 .icon-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Сетки с минимальной шириной 120px */
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .icon-list li {
   background: white;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -276,6 +272,47 @@ main {
   font-size: 1rem;
   font-weight: bold;
   color: #333;
+}
+
+.language-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 2.2rem;
+}
+
+.language-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.language-level {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 footer {
