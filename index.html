@@ -9,7 +9,7 @@
 <body>
 <header>
   <div class="header-container">
-    <h1>Portfolio Studenta</h1>
+    <h1>Vladimír Samoilov</h1>
     <nav>
       <ul>
         <li><a href="index.html">Domů</a></li>
@@ -46,16 +46,17 @@
   </section>
 </main>
 <footer>
-  <p>&copy; 2025 Studentský zápočtový projekt. Poslední aktualizace: Leden 2025. Email: student@example.com</p>
+  <p>&copy; 2025 Studentský zápočtový projekt. Poslední aktualizace: Leden 2025. Email: vladimir.samoilov.dev@gmail.com</p>
 </footer>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll(".about-me, .about-me ul li");
+    const elements = document.querySelectorAll(".about-me, .about-me ul, .about-me ul li");
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Отключаем наблюдение
         }
       });
     });
@@ -63,5 +64,6 @@
     elements.forEach((el) => observer.observe(el));
   });
 </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
 </body>
 </html>
