@@ -48,5 +48,20 @@
 <footer>
   <p>&copy; 2025 Studentský zápočtový projekt. Poslední aktualizace: Leden 2025. Email: student@example.com</p>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".about-me, .about-me ul li");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>
 </body>
 </html>
