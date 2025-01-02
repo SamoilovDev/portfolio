@@ -14,7 +14,7 @@
       <ul>
         <li><a href="index.html" class="active">🌟 Domů</a></li>
         <li><a href="projekty.html">📂 Projekty</a></li>
-        <li><a href="kontakt.html">📧 Kontakt</a></li>
+        <li><a href="kontakt.html">💬 Kontakt</a></li>
       </ul>
     </nav>
   </div>
@@ -26,7 +26,7 @@
       <ul>
         <li><a href="index.html" class="active">🌟 Domů</a></li>
         <li><a href="projekty.html">📂 Projekty</a></li>
-        <li><a href="kontakt.html">📧 Kontakt</a></li>
+        <li><a href="kontakt.html">💬 Kontakt</a></li>
       </ul>
     </nav>
   </div>
@@ -138,7 +138,7 @@
   <div class="footer-container">
     <p>&copy; 2025 Studentský zápočtový projekt</p>
     <p>📅 Poslední aktualizace: <strong>Leden 2025</strong></p>
-    <p>📧 Kontakt: <a href="mailto:vladimir.samoilov.dev@gmail.com">vladimir.samoilov.dev@gmail.com</a></p>
+    <p>📧 Mail: <a href="mailto:vladimir.samoilov.dev@gmail.com">vladimir.samoilov.dev@gmail.com</a></p>
   </div>
 </footer>
 <script>
@@ -168,22 +168,6 @@
     elements.forEach((el) => observer.observe(el));
   });
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const mainHeader = document.querySelector(".main-header");
-    const stickyHeader = document.querySelector(".sticky-header");
-    const mainHeaderHeight = mainHeader.offsetHeight;
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > mainHeaderHeight - 10) {
-        mainHeader.classList.add("hidden");
-        stickyHeader.classList.add("visible");
-      } else {
-        mainHeader.classList.remove("hidden");
-        stickyHeader.classList.remove("visible");
-      }
-    });
-  });
-</script>
+<script src="js/header.js"></script>
 </body>
 </html>
