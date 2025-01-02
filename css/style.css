@@ -466,6 +466,7 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  font-size: 0.9em;
   color: #333;
   transition: transform 0.3s;
 }
@@ -515,6 +516,7 @@ main {
   flex-wrap: wrap !important;
   gap: 20px;
   list-style: none;
+  font-size: 0.9em;
   padding: 0;
   margin: 0 auto;
 }
@@ -526,6 +528,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  min-width: 370px;
   width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex !important;
@@ -537,7 +540,7 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
   .experience-list {
     display: block !important;
   }
@@ -545,6 +548,11 @@ main {
   .experience-item {
     width: 100%;
     margin-bottom: 20px;
+    min-width: 0;
+  }
+
+  .arrow::after {
+    content: "↓";
   }
 }
 
@@ -557,7 +565,7 @@ main {
 
 .education-details li, .skills-list li {
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
@@ -615,7 +623,7 @@ main {
 }
 
 .icon-list span {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: #333;
 }
