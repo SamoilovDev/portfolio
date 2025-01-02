@@ -13,7 +13,7 @@ body {
 header {
   background: #333;
   color: white;
-  padding: 20px 0;
+  padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -216,7 +216,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: #333;
   transition: transform 0.3s;
 }
 
@@ -230,14 +230,91 @@ main {
   margin-bottom: 10px;
 }
 
+.arrow {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, #f1f1f1, #eaeaea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  color: #333;
+}
+
+.arrow::after {
+  content: "→"; /* Стрелка вправо */
+}
+
+.experience-list {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Центрирование списка */
+  display: flex;
+  flex-direction: column-reverse !important; /* Элементы строго один под другим */
+  gap: 20px; /* Интервалы между элементами */
+  max-width: 97%; /* Ограничение ширины для центровки */
+  align-items: stretch; /* Каждый элемент растягивается на всю ширину */
+}
+
+.experience-list li {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%; /* Каждый элемент занимает всю ширину контейнера */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-list li h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: left; /* Оставляем текст выровненным по левому краю */
+}
+
+.experience-list li p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.education-details, .skills-list {
+  !important min-height: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-details li, .skills-list li {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .icon-list-container {
   display: flex;
-  justify-content: center; /* Центрируем контейнер с элементами */
+  justify-content: center;
 }
 
 .icon-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Сетки с минимальной шириной 120px */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -317,13 +394,32 @@ main {
 
 footer {
   background: #333;
-  color: white;
-  text-align: center;
   padding: 20px 0;
-  margin-top: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
 }
 
-footer p {
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-container p {
   margin: 0;
-  font-size: 0.9em;
+}
+
+.footer-container a {
+  color: #1E90FF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
 }
