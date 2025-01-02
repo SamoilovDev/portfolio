@@ -611,9 +611,18 @@ main {
 }
 
 .icon-list img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.icon-list img:hover {
+  transform: scale(1.2);
+}
+
+.icon-list img.hibernate-logo {
+  width: 40px;
+  height: 40px;
 }
 
 .icon-list span {
