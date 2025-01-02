@@ -22,30 +22,44 @@
 <main>
   <section class="projects">
     <h2>Moje Projekty</h2>
-    <div class="project-list">
-      <div class="project">
-        <img src="images/project1.jpg" alt="Projekt 1">
-        <h3>Projekt 1: Webová Aplikace</h3>
-        <p>Tento projekt je webová aplikace postavená pomocí HTML, CSS a JavaScriptu. Nabízí responzivní design a moderní uživatelské rozhraní.</p>
-        <a href="projekt1.html">Více informací</a>
-      </div>
-      <div class="project">
-        <img src="images/project2.jpg" alt="Projekt 2">
-        <h3>Projekt 2: Mobilní Aplikace</h3>
-        <p>Tento projekt zahrnuje vývoj mobilní aplikace pro Android, která poskytuje užitečné funkce pro správu času.</p>
-        <a href="projekt2.html">Více informací</a>
-      </div>
-      <div class="project">
-        <img src="images/project3.jpg" alt="Projekt 3">
-        <h3>Projekt 3: API Integrace</h3>
-        <p>API integrace pro sběr a analýzu dat z různých zdrojů. Projekt využívá moderní technologie jako RESTful API a JSON.</p>
-        <a href="projekt3.html">Více informací</a>
-      </div>
-    </div>
+    <table class="project-table">
+      <thead>
+      <tr>
+        <th>Obrázek</th>
+        <th>Název projektu</th>
+        <th>Popis</th>
+        <th>Odkaz</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><img src="images/project1.jpg" alt="Projekt 1"></td>
+        <td>Webová Aplikace</td>
+        <td>Tento projekt je webová aplikace postavená pomocí HTML, CSS a JavaScriptu. Nabízí responzivní design a moderní uživatelské rozhraní.</td>
+        <td><a href="projekt1.html">Více informací</a></td>
+      </tr>
+      <tr>
+        <td><img src="images/project2.jpg" alt="Projekt 2"></td>
+        <td>Mobilní Aplikace</td>
+        <td>Tento projekt zahrnuje vývoj mobilní aplikace pro Android, která poskytuje užitečné funkce pro správu času.</td>
+        <td><a href="projekt2.html">Více informací</a></td>
+      </tr>
+      <tr>
+        <td><img src="images/project3.jpg" alt="Projekt 3"></td>
+        <td>API Integrace</td>
+        <td>API integrace pro sběr a analýzu dat z různých zdrojů. Projekt využívá moderní technologie jako RESTful API a JSON.</td>
+        <td><a href="projekt3.html">Více informací</a></td>
+      </tr>
+      </tbody>
+    </table>
   </section>
 </main>
 <footer>
-  <p>&copy; 2025 Studentský zápočtový projekt. Poslední aktualizace: Leden 2025. Email: student@example.com</p>
+  <div class="footer-container">
+    <p>&copy; 2025 Studentský zápočtový projekt</p>
+    <p>📅 Poslední aktualizace: <strong>Leden 2025</strong></p>
+    <p>📧 Kontakt: <a href="mailto:vladimir.samoilov.dev@gmail.com">vladimir.samoilov.dev@gmail.com</a></p>
+  </div>
 </footer>
 </body>
 </html>
