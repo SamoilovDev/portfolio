@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt</title>
+  <title>Vladimír Samoilov - Kontakt</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
   <div class="header-container">
-    <h1>Portfolio Studenta</h1>
+    <h1>Vladimír Samoilov - Java Software Engineer</h1>
     <nav>
       <ul>
         <li><a href="index.html">🏠 Domů</a></li>
@@ -22,23 +22,36 @@
 <main>
   <section class="contact">
     <h2>Kontaktujte mě</h2>
-    <p>Máte-li jakékoli dotazy nebo zájem o spolupráci, neváhejte mě kontaktovat prostřednictvím níže uvedeného formuláře.</p>
+    <p>💬 Máte-li jakékoli dotazy nebo zájem o spolupráci, neváhejte mě kontaktovat prostřednictvím níže uvedeného formuláře. 📬</p>
     <form action="#" method="post" class="contact-form">
-      <label for="name">Vaše jméno:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Váš email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Vaše zpráva:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Odeslat</button>
+      <table>
+        <tr>
+          <td><label for="name">Vaše jméno:</label></td>
+          <td><input type="text" id="name" name="name" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Váš email:</label></td>
+          <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td><label for="message">Vaše zpráva:</label></td>
+          <td><textarea id="message" name="message" rows="5" required></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <button type="submit">Odeslat</button>
+          </td>
+        </tr>
+      </table>
     </form>
   </section>
 </main>
 <footer>
-  <p>&copy; 2025 Studentský zápočtový projekt. Poslední aktualizace: Leden 2025. Email: student@example.com</p>
+  <div class="footer-container">
+    <p>&copy; 2025 Studentský zápočtový projekt</p>
+    <p>📅 Poslední aktualizace: <strong>Leden 2025</strong></p>
+    <p>📧 Kontakt: <a href="mailto:vladimir.samoilov.dev@gmail.com">vladimir.samoilov.dev@gmail.com</a></p>
+  </div>
 </footer>
 </body>
 </html>
