@@ -39,10 +39,9 @@
   <section class="about-me">
     <h2>O Mně</h2>
     <p>
-      Jmenuji se <strong>Vladimír Samoilov</strong> a jsem <strong>Java Software Engineer</strong> s více než 4letou komerční zkušeností.
+      Jmenuji se <strong>Vladimír Samoilov</strong> a jsem <strong>Java Software Engineer</strong> s více než <strong>4letou komerční zkušeností</strong>.
       Pracuji jako Middle Java Developer ve společnosti <strong>European Code Factory s.r.o.</strong> od ledna 2023.
-      Baví mě pracovat s technologiemi jako <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>PostgreSQL</strong>,
-      <strong>Docker</strong> a <strong>Kubernetes</strong>. 💻✨
+      Baví mě pracovat s technologiemi jako <strong>Java, Spring Boot, PostgreSQL, Docker</strong> a <strong>Kubernetes</strong>. 💻✨
     </p>
     <p>
       V současné době studuji obor <strong>Aplikovaná informatika</strong> na <strong>Univerzitě Hradec Králové</strong>. 🎓📚
@@ -96,8 +95,6 @@
         <p><strong>🏢 Freelance</strong></p>
         <p><strong>⏳ Období:</strong> Únor 2022 – Únor 2024</p>
         <p><strong>💻 Hlavní činnost:</strong> Interní systém pro správu rezidenčních komplexů a tvorba softwarových řešení na míru, včetně vývoje Telegram botů a databázových řešení.</p>
-      </li>
-      <li class="arrow-wrapper fade-in">
         <div class="arrow"></div>
       </li>
       <li class="experience-item fade-in">
@@ -105,8 +102,6 @@
         <p><strong>🏢 Společnost:</strong> European Code Factory s.r.o.</p>
         <p><strong>⏳ Období:</strong> Leden 2023 – Září 2023</p>
         <p><strong>💻 Hlavní činnost:</strong> Vývoj Online Microsoft Document Editoru pro Sofa602. Použití Spring Framework a moderních front-end technologií.</p>
-      </li>
-      <li class="arrow-wrapper fade-in">
         <div class="arrow"></div>
       </li>
       <li class="experience-item fade-in">
@@ -122,9 +117,9 @@
     <ul class="icon-list">
       <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></li>
       <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin"><span>Kotlin</span></li>
-      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring"><span>Spring</span></li>
       <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Maven"><span>Maven</span></li>
       <li><img src="https://www.vectorlogo.zone/logos/gradle/gradle-icon.svg" alt="Gradle"><span>Gradle</span></li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring"><span>Spring</span></li>
       <li><img class="hibernate-logo" src="https://www.vectorlogo.zone/logos/hibernate/hibernate-icon.svg" alt="Hibernate"><span>Hibernate</span></li>
       <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></li>
       <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></li>
@@ -169,7 +164,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll(
-      ".about-me, .about-me ul, .about-me ul li, .icon-list, .icon-list ul li, .experience-list, .arrow-wrapper, .fade-in"
+      ".about-me, .about-me ul, .about-me ul li, .icon-list, .icon-list ul li, .experience-list, .arrow, .arrow-wrapper, .fade-in"
     );
     let delay = 0;
 
@@ -181,7 +176,7 @@
               entry.target.classList.add("visible");
               observer.unobserve(entry.target);
             }, delay);
-            delay += 200;
+            delay += 500;
           } else {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
