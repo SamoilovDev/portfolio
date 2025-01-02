@@ -44,6 +44,7 @@
         </tr>
       </table>
     </form>
+    <div class="alert">✅ Vaše zpráva byla úspěšně odeslána!</div>
   </section>
 </main>
 <footer>
@@ -55,20 +56,20 @@
 </footer>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll(
-      ".contact .contact-form"
-    );
+    const form = document.querySelector(".contact-form");
+    const alert = document.querySelector(".alert");
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
+    alert.classList.remove("visible");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert.classList.add("visible");
+      form.reset();
+
+      setTimeout(() => {
+        alert.classList.remove("visible");
+      }, 5000);
     });
-
-    elements.forEach((el) => observer.observe(el));
   });
 </script>
 </body>
