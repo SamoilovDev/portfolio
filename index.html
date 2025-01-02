@@ -49,25 +49,25 @@
   <section class="about-me">
     <h2>Pracovní Zkušenosti</h2>
     <ul class="experience-list">
-      <li class="experience-item">
+      <li class="experience-item fade-in">
         <h3>Java Developer</h3>
         <p>🏢 <strong>Freelance</strong></p>
         <p>⏳ <strong>Období:</strong> Únor 2022 – Únor 2024</p>
         <p>💻 <strong>Hlavní činnost:</strong> Interní systém pro správu rezidenčních komplexů a tvorba softwarových řešení na míru, včetně vývoje Telegram botů a databázových řešení.</p>
       </li>
-      <li class="arrow-wrapper">
+      <li class="arrow-wrapper fade-in">
         <div class="arrow"></div>
       </li>
-      <li class="experience-item">
+      <li class="experience-item fade-in">
         <h3>Junior Java Software Engineer</h3>
         <p>🏢 <strong>Společnost:</strong> European Code Factory s.r.o.</p>
         <p>⏳ <strong>Období:</strong> Leden 2023 – Září 2023</p>
         <p>💻 <strong>Hlavní činnost:</strong> Vývoj Online Microsoft Document Editoru pro Sofa602. Použití Spring Framework a moderních front-end technologií.</p>
       </li>
-      <li class="arrow-wrapper">
+      <li class="arrow-wrapper fade-in">
         <div class="arrow"></div>
       </li>
-      <li class="experience-item">
+      <li class="experience-item fade-in">
         <h3>Java Software Engineer</h3>
         <p>🏢 <strong>Společnost:</strong> European Code Factory s.r.o.</p>
         <p>⏳ <strong>Období:</strong> Září 2023 – současnost</p>
@@ -77,8 +77,6 @@
   </section>
   <section class="about-me">
     <h2>Technologie, se kterými pracuji</h2>
-    <ul class="icon-list">
-    </ul>
     <ul class="icon-list">
       <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></li>
       <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin"><span>Kotlin</span></li>
@@ -134,16 +132,23 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll(
-      ".about-me, .about-me ul, .about-me ul li, .icon-list, .icon-list li"
+      ".about-me, .about-me ul, .about-me ul li, .icon-list, .icon-list ul li, .experience-list, .arrow-wrapper, .fade-in"
     );
+    let delay = 0;
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
+          if (entry.target.classList.contains("fade-in")) {
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }, delay);
+            delay += 200;
+          } else {
             entry.target.classList.add("visible");
-            observer.unobserve(entry.target)
-          }, 200);
+            observer.unobserve(entry.target);
+          }
         }
       });
     });
