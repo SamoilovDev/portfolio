@@ -78,6 +78,121 @@ nav ul li a:hover {
   color: #ffd54f;
 }
 
+.main-header {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.main-header.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-container h1 {
+  font-size: 1.4em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+.burger-menu:hover {
+  color: #ffd54f;
+}
+
+.mobile-title {
+  display: none;
+}
+
+
+nav ul.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul.nav-list li a:hover {
+  color: #ffd54f;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: flex-start; /* Сохраняем заголовок слева */
+    align-items: center; /* Выравниваем элементы по центру */
+    position: relative;
+  }
+
+  .desktop-title {
+    display: none; /* Скрываем заголовок для десктопа */
+  }
+
+  .mobile-title {
+    display: block; /* Показываем мобильный заголовок */
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .burger-menu {
+    display: block; /* Показываем бургер-меню */
+  }
+
+  nav ul.nav-list {
+    display: none; /* Скрываем меню по умолчанию */
+    flex-direction: column;
+    gap: 10px;
+    background: #444;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px; /* Расположение меню ниже заголовка */
+    right: 15px; /* Привязка к правому краю экрана */
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul.nav-list.show {
+    display: flex; /* Показываем меню, когда активно */
+  }
+}
+
 .projects {
   max-width: 90%;
   margin: 50px auto;

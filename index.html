@@ -9,9 +9,13 @@
 <body>
 <header class="main-header">
   <div class="header-container">
-    <h1>Vladimír Samoilov - Java Software Engineer</h1>
+    <h1 class="desktop-title">Vladimír Samoilov - Java Software Engineer</h1>
+    <h1 class="mobile-title">Vladimír Samoilov</h1>
+    <button class="burger-menu" aria-label="Toggle navigation">
+      ☰
+    </button>
     <nav>
-      <ul>
+      <ul class="nav-list">
         <li><a href="index.html" class="active">🌟 Domů</a></li>
         <li><a href="projekty.html">📂 Projekty</a></li>
         <li><a href="kontakt.html">💬 Kontakt</a></li>
@@ -221,6 +225,16 @@
     });
 
     elements.forEach((el) => observer.observe(el));
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navList = document.querySelector(".nav-list");
+
+    burgerMenu.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
   });
 </script>
 <script src="js/header.js"></script>
