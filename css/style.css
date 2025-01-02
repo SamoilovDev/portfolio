@@ -510,24 +510,26 @@ main {
   content: "→";
 }
 
+.experience-list {
+  display: flex;
+  flex-wrap: wrap !important;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
 .experience-item {
   position: relative;
   background: white;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-}
-
-.experience-list {
-  flex: 1;
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column-reverse !important;
-  gap: 20px;
-  max-width: 100%;
-  align-items: stretch;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex !important;
+  flex-direction: column;
 }
 
 .experience-list li:hover {
@@ -535,30 +537,15 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.experience-list li h3 strong {
-  align-items: center;
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  color: #333;
-  text-align: left;
-}
+@media (max-width: 768px) {
+  .experience-list {
+    display: block !important;
+  }
 
-.experience-list li p {
-  margin: 10px 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.experience-list li {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 100%;
-  margin-left: 0;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  .experience-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .education-details, .skills-list {
@@ -672,6 +659,38 @@ main {
   margin-top: 5px;
   font-size: 0.9rem;
   color: #666;
+}
+
+.skills-section {
+  margin-top: 20px;
+}
+
+.skills-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-section li {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  width: calc(50% - 15px);
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-section li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .skills-section li {
+    width: 100%;
+  }
 }
 
 footer {
