@@ -202,14 +202,12 @@ main {
 }
 
 .about-me ul li {
-  background: linear-gradient(90deg, #f1f1f1, #eaeaea);
+  background: linear-gradient(90deg, #f8f8f8, #eaeaea);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: #333;
   transition: transform 0.3s;
 }
@@ -224,9 +222,17 @@ main {
   margin-bottom: 10px;
 }
 
+.arrow-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 auto;
+  padding-left: 20px;
+}
+
 .arrow {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(90deg, #f1f1f1, #eaeaea);
   display: flex;
   align-items: center;
@@ -259,7 +265,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  width: 100%;
+  width: 125%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -268,7 +274,8 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.experience-list li h3 {
+.experience-list li h3 strong {
+  align-items: center;
   margin: 0 0 10px;
   font-size: 1.2rem;
   color: #333;
