@@ -1,4 +1,3 @@
-/* Обновленные стили для главной страницы */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
@@ -56,7 +55,6 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-/* Добавляем светящиеся декоративные элементы */
 .hero::before,
 .hero::after {
   content: '';
@@ -68,7 +66,6 @@ nav ul li a:hover {
   animation: floating 6s infinite ease-in-out;
 }
 
-/* Верхний декоративный элемент */
 .hero::before {
   width: 400px;
   height: 400px;
@@ -77,7 +74,6 @@ nav ul li a:hover {
   background: rgba(255, 215, 180, 0.3);
 }
 
-/* Нижний декоративный элемент */
 .hero::after {
   width: 500px;
   height: 500px;
@@ -86,7 +82,6 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* Анимация для мягкого движения */
 @keyframes floating {
   0%, 100% {
     transform: translateY(0) translateX(0);
@@ -96,7 +91,6 @@ nav ul li a:hover {
   }
 }
 
-/* Убедимся, что текст находится поверх фона */
 .hero h1, .hero p {
   position: relative;
   z-index: 1;
@@ -244,19 +238,19 @@ main {
 }
 
 .arrow::after {
-  content: "→"; /* Стрелка вправо */
+  content: "→";
 }
 
 .experience-list {
   flex: 1;
   list-style: none;
   padding: 0;
-  margin: 0 auto; /* Центрирование списка */
+  margin: 0 auto;
   display: flex;
-  flex-direction: column-reverse !important; /* Элементы строго один под другим */
-  gap: 20px; /* Интервалы между элементами */
-  max-width: 97%; /* Ограничение ширины для центровки */
-  align-items: stretch; /* Каждый элемент растягивается на всю ширину */
+  flex-direction: column-reverse !important;
+  gap: 20px;
+  max-width: 97%;
+  align-items: stretch;
 }
 
 .experience-list li {
@@ -265,7 +259,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  width: 100%; /* Каждый элемент занимает всю ширину контейнера */
+  width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -278,14 +272,14 @@ main {
   margin: 0 0 10px;
   font-size: 1.2rem;
   color: #333;
-  text-align: left; /* Оставляем текст выровненным по левому краю */
+  text-align: left;
 }
 
 .experience-list li p {
   margin: 5px 0;
   font-size: 0.95rem;
   line-height: 1.5;
-  text-align: left; /* Выравниваем текст по левому краю */
+  text-align: left;
 }
 
 .education-details, .skills-list {
