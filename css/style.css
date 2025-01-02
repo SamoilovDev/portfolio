@@ -190,6 +190,11 @@ main {
   transform: translateY(0);
 }
 
+.active {
+  color: #FF7744;
+  margin-bottom: 5%;
+}
+
 .about-me h2 {
   font-size: 2.5em;
   color: #FF7744;
