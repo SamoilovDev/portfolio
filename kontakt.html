@@ -53,5 +53,23 @@
     <p>📧 Kontakt: <a href="mailto:vladimir.samoilov.dev@gmail.com">vladimir.samoilov.dev@gmail.com</a></p>
   </div>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(
+      ".contact .contact-form"
+    );
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>
 </body>
 </html>
