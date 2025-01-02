@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 
-header {
+.main-header {
   background: #333;
   color: white;
   padding: 20px 0;
@@ -17,40 +17,48 @@ header {
   position: relative;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-header.sticky {
+.main-header.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.sticky-header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 10px 0; /* Уменьшаем отступы */
+  width: 100%;
+  padding: 10px 0;
+  background: #222;
+  color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Контейнер для заголовка и навигации */
+.sticky-header.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .header-container {
   display: flex;
-  justify-content: space-between; /* Распределяем элементы по сторонам */
-  align-items: center; /* Центрируем элементы по вертикали */
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  transition: all 0.3s ease;
 }
 
-/* Стиль заголовка */
 .header-container h1 {
-  font-size: 1.8em;
+  font-size: 1.4em;
   margin: 0;
-  transition: font-size 0.3s ease;
 }
 
-header.sticky .header-container h1 {
-  font-size: 1.4em; /* Уменьшаем размер текста в режиме sticky */
-}
-
-/* Стиль для списка */
 nav ul {
   list-style: none;
   margin: 0;

@@ -7,9 +7,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
+<header class="main-header">
   <div class="header-container">
     <h1>Vladimír Samoilov - Java Software Engineer</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">🌟 Domů</a></li>
+        <li><a href="projekty.html">📂 Projekty</a></li>
+        <li><a href="kontakt.html">📧 Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<header class="sticky-header">
+  <div class="header-container">
+    <h1>Vladimír Samoilov</h1>
     <nav>
       <ul>
         <li><a href="index.html" class="active">🌟 Domů</a></li>
@@ -156,16 +169,19 @@
     elements.forEach((el) => observer.observe(el));
   });
 </script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector("header");
+    const mainHeader = document.querySelector(".main-header");
+    const stickyHeader = document.querySelector(".sticky-header");
+    const mainHeaderHeight = mainHeader.offsetHeight;
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header.classList.add("sticky");
+      if (window.scrollY > mainHeaderHeight - 10) {
+        mainHeader.classList.add("hidden");
+        stickyHeader.classList.add("visible");
       } else {
-        header.classList.remove("sticky");
+        mainHeader.classList.remove("hidden");
+        stickyHeader.classList.remove("visible");
       }
     });
   });
