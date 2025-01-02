@@ -223,11 +223,13 @@ main {
 }
 
 .arrow-wrapper {
-  display: flex;
-  justify-content: flex-start;
+  background: white !important;
+  z-index: -1;
   align-items: center;
-  flex: 0 0 auto;
-  padding-left: 20px;
+  max-width: 50% !important;
+  margin-left: 20% !important;
+  margin-top: 50%;
+  margin-bottom: 100%;
 }
 
 .arrow {
@@ -247,26 +249,25 @@ main {
   content: "→";
 }
 
+.experience-item {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-left: -20%;
+}
+
 .experience-list {
   flex: 1;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
   display: flex;
   flex-direction: column-reverse !important;
   gap: 20px;
-  max-width: 97%;
+  max-width: 100%;
+  margin: auto;
   align-items: stretch;
-}
-
-.experience-list li {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 125%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-list li:hover {
@@ -283,10 +284,21 @@ main {
 }
 
 .experience-list li p {
-  margin: 5px 0;
+  margin: 10px 0;
   font-size: 0.95rem;
   line-height: 1.5;
   text-align: left;
+}
+
+.experience-list li {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 120%;
+  margin-left: -10%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-details, .skills-list {
