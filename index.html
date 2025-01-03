@@ -9,8 +9,12 @@
 <body>
 <header class="main-header">
   <div class="header-container">
-    <h1 class="desktop-title">Vladimír Samoilov - Java Software Engineer</h1>
-    <h1 class="mobile-title">Vladimír Samoilov 👨‍💻</h1>
+    <h1 class="desktop-title">
+      <span id="open-photo-modal">Vladimír Samoilov</span> - Java Software Engineer
+    </h1>
+    <h1 class="mobile-title">
+      <span id="open-photo-modal-mobile">Vladimír Samoilov</span> 👨‍💻
+    </h1>
     <button class="burger-menu" aria-label="Toggle navigation">
       ☰
     </button>
@@ -21,6 +25,13 @@
         <li><a href="kontakt.html">💬 Kontakt</a></li>
       </ul>
     </nav>
+  </div>
+
+  <div id="photo-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img src="img/samoilov.jpeg" alt="Vladimír Samoilov" />
+    </div>
   </div>
 </header>
 
@@ -71,9 +82,10 @@
       <li><strong>📄 Online Microsoft Document Editor</strong> pro <strong>Sofa602</strong></li>
       <li><strong>💰 Integrace finančních dat Erste Bank</strong> pro <strong>interní sýstem</strong></li>
     </ul>
+    </p>
     <p>
-    Během své kariéry jsem také pracoval jako freelancer na projektech včetně 🏠 systémů správy rezidenčních komplexů a
-    🤖 vývoje Telegram botů.
+      Během své kariéry jsem také pracoval jako freelancer na projektech včetně 🏠 systémů správy rezidenčních komplexů a
+      🤖 vývoje Telegram botů.
     </p>
     <p>
       Jsem vášnivý týmový hráč a velmi společenský člověk. 🤝 Mým cílem je nejen vytvářet smysluplný software,

@@ -13,3 +13,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("photo-modal");
+  const openModalDesktop = document.getElementById("open-photo-modal");
+  const openModalMobile = document.getElementById("open-photo-modal-mobile");
+  const closeModal = document.querySelector(".close-btn");
+  const body = document.body;
+
+  function openModal() {
+    modal.style.display = "block";
+    body.classList.add("no-scroll");
+  }
+
+  function closeModalWindow() {
+    modal.style.display = "none";
+    body.classList.remove("no-scroll");
+  }
+
+  openModalDesktop.addEventListener("click", openModal);
+  openModalMobile.addEventListener("click", openModal);
+
+  closeModal.addEventListener("click", closeModalWindow);
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModalWindow();
+    }
+  });
+});
