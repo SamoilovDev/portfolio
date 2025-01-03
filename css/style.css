@@ -60,13 +60,33 @@ body {
 #open-photo-modal,
 #open-photo-modal-mobile {
   cursor: pointer;
-  color: #ffd54f;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #FFB447 0%,
+    #FFCD6A 25%,
+    #fa7048 50%,
+    #FF7744 75%,
+    #FFB447 100%);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: infinite-smooth-gradient 8s linear infinite;
+  transition: transform 0.3s ease;
 }
 
 #open-photo-modal:hover,
 #open-photo-modal-mobile:hover {
-  color: #ffca28;
+  transform: scale(1.1);
+}
+
+@keyframes infinite-smooth-gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
 }
 
 .main-header {
