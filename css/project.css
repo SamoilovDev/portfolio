@@ -17,10 +17,17 @@
   letter-spacing: 1px;
 }
 
+.project-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
 .project-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
   background: #f9f9f9;
   border-radius: 15px;
   overflow: hidden;
