@@ -334,6 +334,35 @@ nav ul.nav-list:not(.show) {
   }
 }
 
+.desktop-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.clickable-gradient {
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.clickable-gradient:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.job-title {
+  margin-right: 10px;
+  transition: margin-left 0.3s ease;
+}
+
+.clickable-gradient:hover + .job-title {
+  margin-left: 10px;
+}
+
 .hero {
   text-align: center;
   border-radius: 15px;
