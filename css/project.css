@@ -1,0 +1,101 @@
+.projects {
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 40px 20px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.projects h2 {
+  font-size: 2.5em;
+  color: #FF7744;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-table thead {
+  background: linear-gradient(90deg, #f8f8f8, #eaeaea);
+  border-bottom: 1px solid #ddd;
+  color: #111;
+}
+
+.project-table th {
+  padding: 15px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.project-table th:last-child {
+  border-right: none;
+}
+
+.project-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease;
+}
+
+.project-table tbody tr:hover {
+  background: #fef6f0;
+}
+
+.project-table td {
+  padding: 15px;
+  vertical-align: middle;
+  font-size: 1em;
+  color: #555;
+}
+
+.project-table img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-table h3 {
+  color: #FF7744;
+  font-size: 1.3em;
+  margin: 5px 0;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.project-table p {
+  margin: 5px 0;
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95em;
+  text-align: justify;
+}
+
+.project-table a {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 10px;
+  background: #FF7744;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-table a:hover {
+  background: #FF7744;
+  transform: translateY(-3px);
+}

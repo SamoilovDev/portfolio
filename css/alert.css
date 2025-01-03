@@ -1,0 +1,15 @@
+.alert {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #d4edda;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.alert.visible {
+  display: block;
+  animation: fadeInUp 0.5s ease-in-out;
+}
