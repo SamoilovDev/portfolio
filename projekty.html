@@ -44,7 +44,7 @@
 
 <main>
   <section class="projects">
-    <h2>Moje Projekty</h2>
+    <h2>Pracovní Projekty</h2>
     <table class="project-table">
       <thead>
       <tr>
@@ -59,19 +59,19 @@
         <td>Webová Aplikace</td>
         <td>Tento projekt je webová aplikace postavená pomocí moderního uživatelského rozhraní s responzivním designem.</td>
         <td>HTML, CSS, JavaScript</td>
-        <td><span class="status completed">Dokončeno</span></td>
+        <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
       </tr>
       <tr>
         <td>Mobilní Aplikace</td>
         <td>Tento projekt zahrnuje vývoj mobilní aplikace pro Android, která poskytuje užitečné funkce pro správu času.</td>
         <td>Java, Android SDK</td>
-        <td><span class="status ongoing">Probíhá</span></td>
+        <td><span class="status ongoing" onclick="dropStickers(event)">Probíhá</span></td>
       </tr>
       <tr>
         <td>API Integrace</td>
-        <td>API integrace pro sběr a analýzu dat z různých zdrojů. Projekt využívá moderní technologie jako RESTful API.</td>
+        <td>API integrace pro sběr a analýzu dat z různých zdrojů. Projekt využívá moderní технологии jako RESTful API.</td>
         <td>Java, Spring Boot, REST API, JSON</td>
-        <td><span class="status planned">Plánováno</span></td>
+        <td><span class="status planned" onclick="dropStickers(event)">Plánováno</span></td>
       </tr>
       </tbody>
     </table>
@@ -87,5 +87,51 @@
 </footer>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
+<script>
+  function dropStickers(event) {
+    const statusElement = event.target;
+    const rect = statusElement.getBoundingClientRect();
+    let stickers = [];
+
+    if (statusElement.classList.contains("completed")) {
+      stickers = ["✅", "🎉", "🏆", "✨", "🎖️"];
+    } else if (statusElement.classList.contains("ongoing")) {
+      stickers = ["🚀", "🔄", "🌟", "⚙️", "⏳"];
+    } else if (statusElement.classList.contains("planned")) {
+      stickers = ["📅", "🔮", "🌈", "💡", "📌"];
+    }
+
+    const positions = [
+      { x: 0, y: rect.height / 4 },
+      { x: rect.width, y: rect.height / 4 },
+      { x: rect.width / 2, y: 0 },
+      { x: rect.width / 2, y: rect.height },
+    ];
+
+    positions.forEach((position) => {
+      for (let i = 0; i < 3; i++) {
+        const sticker = document.createElement("span");
+        sticker.classList.add("sticker");
+        sticker.textContent = stickers[Math.floor(Math.random() * stickers.length)];
+
+        const randomOffsetX = Math.random() * 20 - 10;
+        const randomOffsetY = Math.random() * 20 - 10;
+        const randomDelay = Math.random() * 0.2;
+
+        sticker.style.left = `${position.x + randomOffsetX}px`;
+        sticker.style.top = `${position.y + randomOffsetY}px`;
+        sticker.style.setProperty("--x", `${Math.random() * 60 - 30}px`);
+        sticker.style.setProperty("--y", `${Math.random() * 60 - 30}px`);
+        sticker.style.animationDelay = `${randomDelay}s`;
+
+        statusElement.appendChild(sticker);
+
+        setTimeout(() => {
+          sticker.remove();
+        }, 1000);
+      }
+    });
+  }
+</script>
 </body>
 </html>

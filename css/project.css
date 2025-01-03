@@ -109,6 +109,10 @@
   text-align: center;
   display: inline-block;
   min-width: 70%;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
 }
 
 .status.completed {
@@ -121,4 +125,34 @@
 
 .status.planned {
   background-color: #007bff;
+}
+
+.status:hover {
+  opacity: 0.9;
+}
+
+.sticker {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 1;
+  animation: burst 1s ease-out forwards;
+  transform-origin: center;
+  animation-delay: var(--delay);
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(var(--x), var(--y)) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0.8);
+    opacity: 0;
+  }
 }
