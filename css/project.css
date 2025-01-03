@@ -99,3 +99,26 @@
   background: #FF7744;
   transform: translateY(-3px);
 }
+
+
+.status {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  min-width: 70%;
+}
+
+.status.completed {
+  background-color: #28a745;
+}
+
+.status.ongoing {
+  background-color: #FF7744;
+}
+
+.status.planned {
+  background-color: #007bff;
+}
