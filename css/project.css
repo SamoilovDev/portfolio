@@ -44,7 +44,6 @@
   padding: 15px;
   text-align: left;
   font-size: 1.2em;
-  min-width: 150px;
 }
 
 .project-table th:last-child {
@@ -60,18 +59,27 @@
   background: #fef6f0;
 }
 
+.project-table .project-name {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #333;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.project-name span.emoji {
+  font-size: 1.5em;
+}
+
 .project-table td {
   padding: 15px;
   vertical-align: middle;
   font-size: 1em;
   color: #333;
-}
-
-.project-table img {
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-table h3 {
