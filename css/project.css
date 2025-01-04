@@ -89,19 +89,6 @@
   text-align: justify;
 }
 
-.project-table a {
-  display: inline-block;
-  padding: 8px 20px;
-  margin-top: 10px;
-  background: #FF7744;
-  color: white;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
 .project-table a:hover {
   background: #FF7744;
   transform: translateY(-3px);
@@ -119,7 +106,7 @@
   position: relative;
   cursor: pointer;
   user-select: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .status.completed {
