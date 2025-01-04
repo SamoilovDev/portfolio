@@ -49,40 +49,152 @@
       <table class="project-table">
         <thead>
         <tr>
-          <th>Název projektu</th>
-          <th>Popis</th>
-          <th>Použité technologie</th>
-          <th>Stav projektu</th>
+          <th style="min-width: 150px !important; max-width: 15%">Název projektu</th>
+          <th style="min-width: 300px !important; max-width: 30%">Popis</th>
+          <th style="min-width: 400px !important; max-width: 40%">Použité technologie</th>
+          <th style="min-width: 150px !important; max-width: 15%">Stav projektu</th>
         </tr>
         </thead>
         <tr>
+          <td>Scratch Cards Platform pro Fortuna</td>
+          <td>Přizpůsobená platforma pro správu a distribuci stíracích losů, zahrnující kompletní cyklus od vytváření emisí losů až po jejich prodej a vyplácení výher. Platforma využívá mikroslužbovou architekturu pro škálovatelnost, vysokou dostupnost a jednoduchou integraci s dalšími systémy.</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 17</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">Kafka</div>
+              <div class="tech-box">PostgreSQL</div>
+              <div class="tech-box">Redis</div>
+              <div class="tech-box">React</div>
+              <div class="tech-box">TypeScript</div>
+              <div class="tech-box">Kubernetes</div>
+              <div class="tech-box">Docker</div>
+              <div class="tech-box">Keycloak</div>
+              <div class="tech-box">Jenkins</div>
+              <div class="tech-box">Prometheus</div>
+            </div>
+          </td>
+          <td><span class="status planned" onclick="dropStickers(event)">V plánech</span></td>
+        </tr>
+        <tr>
           <td>FAS Portál nároku na digitální službu</td>
           <td>Formulářový server, který poskytuje REST API pro správu metadat, souborů a verzí formulářů, včetně funkcí jako nahrání, aktualizace, smazání a získání dat. Systém optimalizován pro integraci s dalšími službami a bezpečnou správu dat.</td>
-          <td>Java 17, Spring Boot (Web, DevTools, Configuration Processor, Data JPA), PostgreSQL, Azure Storage, Azure Application Insights, Azure Functions, jjwt, Lombok, Spring Cloud Azure</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 17</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">DevTools</div>
+              <div class="tech-box">Data JPA</div>
+              <div class="tech-box">PostgreSQL</div>
+              <div class="tech-box">Azure Storage</div>
+              <div class="tech-box">Azure Functions</div>
+              <div class="tech-box">jjwt</div>
+              <div class="tech-box">Lombok</div>
+              <div class="tech-box">Spring Cloud Azure</div>
+            </div>
+          </td>
           <td><span class="status ongoing" onclick="dropStickers(event)">Probíhá</span></td>
         </tr>
         <tr>
           <td>AI-Powered Reclaim Hub Service pro Packeta</td>
           <td>Vyvinutá AI služba pro společnost Packeta pro zrychlení párování ztracených zásilek uživatelů s neidentifikovanými balíky ve skladech, čímž se zvýšila efektivita procesů pro obnovu ztracených zásilek.</td>
-          <td>Java 17, Spring Boot (WebFlux, Security, Data JPA, Cache, DevTools, Configuration Processor), PostgreSQL, Azure Active Directory, Azure Open AI, Application Insights, Lombok, OpenAPI, OpenShift, Kubernetes, Docker, Maven</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 17</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">WebFlux</div>
+              <div class="tech-box">Security</div>
+              <div class="tech-box">Data JPA</div>
+              <div class="tech-box">Cache</div>
+              <div class="tech-box">DevTools</div>
+              <div class="tech-box">Configuration Processor</div>
+              <div class="tech-box">PostgreSQL</div>
+              <div class="tech-box">Azure Active Directory</div>
+              <div class="tech-box">Azure Open AI</div>
+              <div class="tech-box">Application Insights</div>
+              <div class="tech-box">Lombok</div>
+              <div class="tech-box">OpenAPI</div>
+              <div class="tech-box">OpenShift</div>
+              <div class="tech-box">Kubernetes</div>
+              <div class="tech-box">Docker</div>
+              <div class="tech-box">Maven</div>
+            </div>
+          </td>
           <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
         </tr>
         <tr>
           <td>Energy Management Platform pro Landis+Gyr</td>
           <td>Vyvinuta platforma pro správu energie pro společnost Landis+Gyr, která zahrnuje import dat, zpracování v reálném čase, správu vzorců a další funkce. Platforma využívá architekturu mikroslužeb pro optimalizaci analytiky a provozu energie.</td>
-          <td>Java 8, Spring Boot (MVC, Security, Data JPA, Mail, Kafka, Websockets, DevTools, Configuration Processor), Flyway, OpenAPI, Lombok, Keycloak, PostgreSQL, OpenShift, Docker, Maven (+FE: TS, React, CSS, HTML, Yarn)</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 8</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">MVC</div>
+              <div class="tech-box">Security</div>
+              <div class="tech-box">Data JPA</div>
+              <div class="tech-box">Mail</div>
+              <div class="tech-box">Kafka</div>
+              <div class="tech-box">Websockets</div>
+              <div class="tech-box">DevTools</div>
+              <div class="tech-box">Configuration Processor</div>
+              <div class="tech-box">Flyway</div>
+              <div class="tech-box">OpenAPI</div>
+              <div class="tech-box">Lombok</div>
+              <div class="tech-box">Keycloak</div>
+              <div class="tech-box">PostgreSQL</div>
+              <div class="tech-box">OpenShift</div>
+              <div class="tech-box">Docker</div>
+              <div class="tech-box">Maven</div>
+              <div class="tech-box">TypeScript</div>
+              <div class="tech-box">React</div>
+              <div class="tech-box">CSS</div>
+              <div class="tech-box">HTML</div>
+              <div class="tech-box">Yarn</div>
+            </div>
+          </td>
           <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
         </tr>
         <tr>
           <td>Real-Time Financial Data Integration s Erste Bank API</td>
           <td>Vyvinutý vysoce výkonný interní systém s integrací Erste API, který umožňuje v reálném čase načítání a zpracování informací o zůstatku na účtech pro zlepšení přístupu k finančním datům.</td>
-          <td>Java 17, Spring Boot (WebFlux, Security, DevTools, Configuration Processor), Redis, Lombok, OpenAPI, OpenShift, Docker</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 17</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">WebFlux</div>
+              <div class="tech-box">Security</div>
+              <div class="tech-box">DevTools</div>
+              <div class="tech-box">Configuration Processor</div>
+              <div class="tech-box">Redis</div>
+              <div class="tech-box">Lombok</div>
+              <div class="tech-box">OpenAPI</div>
+              <div class="tech-box">OpenShift</div>
+              <div class="tech-box">Docker</div>
+            </div>
+          </td>
           <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
         </tr>
         <tr>
           <td>Online Microsoft Document Editor pro Sofa602</td>
           <td>Vyvinuta aplikace pro Sofa602, která umožňuje uživatelům plně pracovat s dokumenty Microsoft online přímo na jejich platformě.</td>
-          <td>Java 17, Spring Boot (WebFlux, Security, Cloud Azure Active Directory, DevTools, Configuration Processor), Thymeleaf, Redis, Lombok, OpenAPI, OpenShift, Docker, JaCoCo</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 17</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">WebFlux</div>
+              <div class="tech-box">Security</div>
+              <div class="tech-box">Cloud Azure Active Directory</div>
+              <div class="tech-box">DevTools</div>
+              <div class="tech-box">Configuration Processor</div>
+              <div class="tech-box">Thymeleaf</div>
+              <div class="tech-box">Redis</div>
+              <div class="tech-box">Lombok</div>
+              <div class="tech-box">OpenAPI</div>
+              <div class="tech-box">OpenShift</div>
+              <div class="tech-box">Docker</div>
+              <div class="tech-box">JaCoCo</div>
+            </div>
+          </td>
           <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
         </tr>
       </table>
@@ -94,28 +206,54 @@
       <table class="project-table">
         <thead>
         <tr>
-          <th>Název projektu</th>
-          <th>Popis</th>
-          <th>Použité technologie</th>
-          <th>Stav projektu</th>
+          <th style="min-width: 150px !important; max-width: 15%">Název projektu</th>
+          <th style="min-width: 300px !important; max-width: 30%">Popis</th>
+          <th style="min-width: 400px !important; max-width: 40%">Použité technologie</th>
+          <th style="min-width: 150px !important; max-width: 15%">Stav projektu</th>
         </tr>
         </thead>
         <tr>
           <td>Interní systém pro správu bytové společnosti</td>
           <td>Vyvinutý interní webový systém pro správu a zpracování žádostí obyvatel, automatizaci zpracování požadavků, sledování stavů a usnadnění komunikace mezi zaměstnanci a obyvateli.</td>
-          <td>Java 17, Spring Boot (Security, Data JPA, Mail), PostgreSQL, Thymeleaf, HTML, CSS</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 17</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">Security</div>
+              <div class="tech-box">Data JPA</div>
+              <div class="tech-box">Mail</div>
+              <div class="tech-box">PostgreSQL</div>
+              <div class="tech-box">Thymeleaf</div>
+              <div class="tech-box">HTML</div>
+              <div class="tech-box">CSS</div>
+            </div>
+          </td>
           <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
         </tr>
         <tr>
           <td>Telegram Bot pro kazachstánskou společnost</td>
           <td>Vyvinut Telegram chatbot, který klientům umožňuje komunikaci s podporou, přístup k informacím o produktech a podávání požadavků s využitím cloudových technologií.</td>
-          <td>Java 17, Spring Boot (Data JPA, Cache, Cloud), Telegram Bots API, MySQL, MapStruct, Lombok, AWS Cloud Services, Docker</td>
+          <td>
+            <div class="tech-container">
+              <div class="tech-box">Java 17</div>
+              <div class="tech-box">Spring Boot</div>
+              <div class="tech-box">Data JPA</div>
+              <div class="tech-box">Cache</div>
+              <div class="tech-box">Cloud</div>
+              <div class="tech-box">Telegram Bots API</div>
+              <div class="tech-box">MySQL</div>
+              <div class="tech-box">MapStruct</div>
+              <div class="tech-box">Lombok</div>
+              <div class="tech-box">AWS Cloud Services</div>
+              <div class="tech-box">Docker</div>
+            </div>
+          </td>
           <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
         </tr>
         <tr>
           <td>Menší úkoly</td>
           <td>Opravy chyb, analýza databází pro migraci, automatizace procesů, tvorba menších webových služeb a psaní testů.</td>
-          <td>-</td>
+          <td></td>
           <td><span class="status completed" onclick="dropStickers(event)">Dokončeno</span></td>
         </tr>
       </table>
@@ -127,10 +265,10 @@
       <table class="project-table">
         <thead>
         <tr>
-          <th>Název projektu</th>
-          <th>Popis</th>
-          <th>Použité technologie</th>
-          <th>Stav projektu</th>
+          <th style="min-width: 150px !important; max-width: 15%">Název projektu</th>
+          <th style="min-width: 300px !important; max-width: 30%">Popis</th>
+          <th style="min-width: 400px !important; max-width: 40%">Použité technologie</th>
+          <th style="min-width: 150px !important; max-width: 15%">Stav projektu</th>
         </tr>
         </thead>
       </table>
