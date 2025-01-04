@@ -636,7 +636,6 @@ main {
 }
 
 .experience-list li:hover {
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out !important;
   transform: translateY(10px) !important;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
