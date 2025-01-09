@@ -802,33 +802,65 @@ main {
 }
 
 footer {
+  justify-content: center;
   background: #333;
-  padding: 20px 0;
-  text-align: center;
+  padding: 40px 20px;
   color: #fff;
-  font-size: 0.9rem;
-  border-top: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer-container {
-  max-width: 800px;
+  max-width: 1200px; /* Ограничивает ширину контейнера */
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around; /* Равномерно распределяет колонки */
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+
+.footer-column {
+  flex: 1; /* Все колонки занимают равное пространство */
+  min-width: 200px; /* Минимальная ширина для адаптивности */
+  text-align: center; /* Центрирует контент внутри колонки */
+}
+
+.footer-column p {
+  display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center; /* Центрирует текстовые элементы и иконки */
+  gap: 8px;
 }
 
-.footer-container p {
-  margin: 0;
+.footer-column .footer-strong {
+  margin-bottom: 10px; /* Добавляет отступ для заголовка */
+  font-size: 1.2rem; /* Размер заголовка */
+  color: #fff;
 }
 
-.footer-container a {
-  color: #1E90FF;
+.footer-column i {
+  color: #fff;
+  font-size: 1.2rem; /* Размер иконок */
+}
+
+.footer-column a {
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-.footer-container a:hover {
-  text-decoration: underline;
+.footer-column a:hover {
+  color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Колонки выстраиваются вертикально */
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center; /* Центрирует текст на мобильных устройствах */
+  }
 }
