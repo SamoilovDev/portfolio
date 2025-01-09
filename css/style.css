@@ -804,7 +804,7 @@ main {
 footer {
   justify-content: center;
   background: #333;
-  padding: 40px 20px;
+  padding: 20px 20px;
   color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -814,7 +814,7 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Выровнять верхние части колонок */
   flex-wrap: wrap;
   gap: 20px;
   position: relative;
@@ -848,16 +848,6 @@ footer {
   margin: 8px auto 0;
 }
 
-.contact-info {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.info-icon {
-  margin-right: 5px;
-  font-size: 1.3rem;
-}
-
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -870,7 +860,7 @@ footer {
 }
 
 .social-icon {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-right: 8px;
   transition: transform 0.3s;
   color: #fff;
@@ -880,5 +870,13 @@ footer {
   color: #1f8cff;
   text-decoration: none;
   font-weight: bold;
+  font-size: 0.9em;
+  position: relative;
+  top: -1px;
   transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+  color: #FF7744; /* Изменение цвета */
+  transform: translateY(-2px); /* Лёгкий подъем текста */
 }
