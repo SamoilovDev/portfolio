@@ -506,7 +506,7 @@ main {
 
 .about-me {
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 5% auto;
   padding: 30px;
   background: white;
   border-radius: 15px;
@@ -810,57 +810,75 @@ footer {
 }
 
 .footer-container {
-  max-width: 1200px; /* Ограничивает ширину контейнера */
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around; /* Равномерно распределяет колонки */
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   position: relative;
 }
 
 .footer-column {
-  flex: 1; /* Все колонки занимают равное пространство */
-  min-width: 200px; /* Минимальная ширина для адаптивности */
-  text-align: center; /* Центрирует контент внутри колонки */
+  text-align: center;
+  padding: 15px 10px;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-width: 200px;
 }
 
-.footer-column p {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Центрирует текстовые элементы и иконки */
-  gap: 8px;
-}
-
-.footer-column .footer-strong {
-  margin-bottom: 10px; /* Добавляет отступ для заголовка */
-  font-size: 1.2rem; /* Размер заголовка */
-  color: #fff;
-}
-
-.footer-column i {
-  color: #fff;
-  font-size: 1.2rem; /* Размер иконок */
-}
-
-.footer-column a {
-  color: #007bff;
-  text-decoration: none;
+.footer-strong {
+  font-size: 1.4rem;
   font-weight: bold;
-  transition: color 0.3s;
+  margin-bottom: 7px;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
 }
 
-.footer-column a:hover {
-  color: #ffd700;
+.footer-strong::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #FF7744;
+  margin: 8px auto 0;
+}
+
+.contact-info {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.info-icon {
+  margin-right: 5px;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column; /* Колонки выстраиваются вертикально */
+    flex-direction: column;
     align-items: center;
   }
 
   .footer-column {
-    text-align: center; /* Центрирует текст на мобильных устройствах */
+    text-align: center;
   }
+}
+
+.social-icon {
+  font-size: 1.3rem;
+  margin-right: 8px;
+  transition: transform 0.3s;
+  color: #fff;
+}
+
+.social-link {
+  color: #1f8cff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
 }
