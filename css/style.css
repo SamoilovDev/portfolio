@@ -861,7 +861,7 @@ footer {
 
 .social-icon {
   font-size: 1rem;
-  margin-right: 8px;
+  margin-right: 5px;
   transition: transform 0.3s;
   color: #fff;
 }
@@ -877,6 +877,6 @@ footer {
 }
 
 .social-link:hover {
-  color: #FF7744; /* Изменение цвета */
-  transform: translateY(-2px); /* Лёгкий подъем текста */
+  color: #FF7744;
+  transform: translateY(-2px);
 }
